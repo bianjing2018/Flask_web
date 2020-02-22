@@ -1,20 +1,22 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from view import app
 from flask_login import UserMixin
-app.config.from_object('config')
-db = SQLAlchemy(app)
+from run import db
+from datetime import datetime
 
 
-class User(db.Model, UserMixin):
+class Users(db.Model, UserMixin):
     __tablename__ = 'users'
 
-    super(UserMixin).get_id()
     id = db.Column(db.Integer, primary_key=True)
-    user_name = db.Column(db.String(32), unique=True)
-    password = db.Column(db.String(1000))
+    name = db.Column(db.String(32), unique=True)
+    pwd = db.Column(db.String(1000))
     end_date = db.Column(db.DateTime)
     record_id = db.Column(db.Integer, db.ForeignKey('pay_record.id'))
+
+    def __init__(self, name, pwd):
+        self.name = name
+        self.pwd = pwd
+        self.end_date = datetime()
 
     def is_authenticated(self):
         return True
@@ -26,7 +28,7 @@ class User(db.Model, UserMixin):
         return False
 
     def __repr__(self):
-        return 'User object: %s ' % self.user_name
+        return 'User object: %s ' % self.name
 
 
 class PayRecord(db.Model):

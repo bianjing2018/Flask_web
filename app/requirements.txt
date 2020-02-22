@@ -1,0 +1,2 @@
+Flask-WTF
+Flask-Login == 0.5.0
