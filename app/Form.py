@@ -12,6 +12,7 @@ class Login_Form(FlaskForm):
 
 
 class Register_Form(FlaskForm):
-    name = StringField('name', validators=[Required()])
-    pwd = PasswordField('pwd', validators=[Required()])
+    name = StringField('登录名', validators=[Required()])
+    pwd = PasswordField('密码', validators=[Required()])
+    confirm_pwd = PasswordField('确认密码', validators=[Required()])
     submit = SubmitField('register')
