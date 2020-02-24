@@ -1,8 +1,70 @@
 {% extends "ssx_base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
-{% block title %}Flasky{% endblock %}
+{% block title %}Download{% endblock %}
 {% block page_content %}
 
-<h1>THIS IS DOWNLOAD PAGE</h1>
+<div class="container">
+    <br>
+    <img>
+        <div>
+            <img src="../static/img/download.jpg" style="vertical-align:middle">
+            <h1 href=""><img src="../static/img/download.jpg" alt=""> Download</h1>
+        </div>
+
+    </div>
+    <hr>
+    <div row>
+        <div>
+            <h2><img src="" alt=""/>Mac OSX</h2>
+            <hr>
+            <ul>
+                <li><kdb>如何安装程序</kdb>: <a href="">点击这里</a></li>
+                <li><code>如何更新程序</code>: <a href="">点击这里</a></li>
+                <li><code>如何更改端口</code>: <a href="">点击这里</a></li>
+                <li><code>直接下载Mac安装包</code>: <a href="">点击这里</a></li>
+                <li><code>直接下载Mac配置文件</code>: <a href="{{ url_for('download_file')}}">点击这里</a></li>
+                <li><code>如何购买套餐或者续费</code>: <a href="/ssx_ssx_account_info">点击这里</a></li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h2><img src="" alt=""/>Windows</h2>
+            <hr>
+            <ul>
+                <li><code>如何安装程序</code>: <a href="">点击这里</a></li>
+                <li><code>如何更新程序</code>: <a href="">点击这里</a></li>
+                <li><code>如何更改端口</code>: <a href="">点击这里</a></li>
+                <li><code>直接下载Mac安装包</code>: <a href="">点击这里</a></li>
+                <li><code>如何购买套餐或者续费</code>: <a href="/ssx_ssx_account_info">点击这里</a></li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h2><img src="" alt=""/>iPhone/iPad</h2>
+            <hr>
+            <ul>
+                <li><code>如何安装程序</code>: <a href="">点击这里</a></li>
+                <li><code>如何更新程序</code>: <a href="">点击这里</a></li>
+                <li><code>如何更改端口</code>: <a href="">点击这里</a></li>
+                <li><code>直接下载Mac安装包</code>: <a href="">点击这里</a></li>
+                <li><code>如何购买套餐或者续费</code>: <a href="/ssx_ssx_account_info">点击这里</a></li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h2><img src="" alt=""/>Android</h2>
+            <hr>
+            <ul>
+                <li><code>如何安装程序</code>: <a href="">点击这里</a></li>
+                <li><code>如何更新程序</code>: <a href="">点击这里</a></li>
+                <li><code>如何更改端口</code>: <a href="">点击这里</a></li>
+                <li><code>直接下载Mac安装包</code>: <a href="">点击这里</a></li>
+                <li><code>如何购买套餐或者续费</code>: <a href="/ssx_ssx_account_info">点击这里</a></li>
+            </ul>
+        </div>
+    </div>
+    <br><br>
+</div>
+
 
 {% endblock %}

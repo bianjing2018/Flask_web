@@ -6,6 +6,8 @@ from Model import Users
 from flask_login import LoginManager, login_user, UserMixin, logout_user, login_required
 from run import app, LoginManager, db
 from flask_cors import CORS
+import os
+from flask import send_file, send_from_directory
 CORS(app)
 
 
@@ -53,6 +55,7 @@ def ssx_contact():
 
 
 @app.route('/ssx_account_info')
+@login_required
 def ssx_account_info():
     form = Login_Form()
     return render_template('ssx_account_info.html', form=form)
@@ -97,3 +100,11 @@ def register():
         flash('注册成功')
         return redirect(url_for('login'))
     return render_template('ssx_register.html', form=form)
+
+
+@app.route('/download_file', methods=['GET'])
+def download_file():
+    vbs_path = '../static/download_file/'
+    file_path = 'mac_config' + '.json'
+    # path = os.join.path(vbs_path, filename)
+    return send_from_directory(vbs_path, file_path, as_attachment=True)

@@ -1,8 +1,50 @@
 {% extends "ssx_base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
-{% block title %}Flasky{% endblock %}
+{% block title %}Account Info{% endblock %}
 {% block page_content %}
 
-<h1>THIS IS Account Info PAGE</h1>
+<div class="container">
+    <br>
+    <div>
+        <h1 style="">SSX Account Info</h1>
+        <hr>
+        <div>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Welcome, current_user</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Your account expires time, </p>
+        </div>
+    </div>
+    <hr>
+    <div row>
+        <div>
+            <img src="../static/img/alipay.png" alt=""/>
+            <br>
+            <ul>
+                <li><code>1 mouth 18 rmb</code>: <input type="submit" value="By Now"/></li>
+                <li><code>3 mouth 54 rmb</code>: <input type="submit" value="By Now"/></li>
+                <li><code>6 mouth 90 rmb</code>: <input type="submit" value="By Now"/></li>
+                <li><code>12 mouth 160 rmb</code>: <input type="submit" value="By Now"/></li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h3><img src="" alt=""/>Using Help</h3>
+            <hr>
+            <ul>
+                <li><code>How To Install App</code>: <a href="">Clink ON</a></li>
+            </ul>
+        </div>
+        <br>
+        <div>
+            <h3><img src="" alt=""/>Contact Details</h3>
+            <hr>
+            <ul>
+                <p style="color: #818182;">For some reason, we use email as the contact method, but please rest assured that we will reply in real time</p>
+                <li><code>Email</code>: bianjing166@gemail.com</li>
+            </ul>
+        </div>
+        <br>
+    </div>
+    <br><br>
+</div>
 
 {% endblock %}
