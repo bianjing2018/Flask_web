@@ -4,57 +4,160 @@
 {% block page_content %}
 
 <style>
-    * {padding:0; margin: 0}
-    .container_ {
+    * {
+        padding: 0;
+        margin: 0
+    }
+
+    .content_main {
         width: 100%;
-        margin:0 auto;
-        background: #ffffff;
-        position: absolute;}
-    .header_ {
-        height: 90px;
-        width: 100%;
-        background: #ffffff}
-    .content_ {
-        width: 30%;
         height: 300px;
         background: #eee;
-        float: left;}
-    .left_nav_ {
-        width: 50%;
+    }
+
+    .left_div {
+        width: 40%;
         height: 300px;
-        background:#eee;
-        position: marker;
-        }
-    .footer_ {
-        height: 50px;
-        background: #0f1011;
-        clear:both}
-    .download-button {
-        margin-left: 50px;
-        margin-top: 100px}
-    .download_mac-config {
-        margin-left: 50px;
-        margin-bottom: 100px;
-        margin-top: 10px}
-    .submit {
+        float: left;
+    }
+
+    .right_div {
+        width: 60%;
+        height: 300px;
+        float: right;
+    }
+
+    .submit_mac {
+        margin-left: 15%;
         width: 270px;
         height: 45px;
-        border-radius: 10px;}
+        margin-top: 20%;
+        border-radius: 10px;
+    }
+
+    input:hover {
+        color: #ffffff;
+        background-color: #0b752f
+    }
+
+    input:active {
+        color: #ffffff;
+        background-color: #0b752f
+    }
+
+    .submit_win {
+        margin-left: 15%;
+        width: 270px;
+        height: 45px;
+        border-radius: 10px;
+        margin-top: 5%;
+    }
+
+    .sock5 {
+        margin-top: 10%;
+        height: 300px;
+        width: 100%;
+        text-align: left;
+        font-size: 30px;
+        vertical-align: middle;
+        color: #8a8a8a;
+    }
+
+    .home-instro {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        font-size: 25px;
+        vertical-align: middle;
+        color: #8a8a8a;
+        background: #eee;
+        font-style: oblique;
+    }
+
+    .footer_ {
+        clear: both;
+        height: 50px;
+        background: #0f1011;
+    }
+
 </style>
 
-<div class="container_">
+<div class="navbar-collapse">
     <div class="header_"><span><h1>ShadowsocksX</h1></span></div>
-    <div class="content_">
-        <div class="download-button">
-            <input class="submit" type="submit" value="MAC客户端下载">
+    <hr>
+    <div class="content_main">
+        <div class="left_div">
+            <input class="submit_mac" type="submit" value="MAC客户端下载">
+            <input class="submit_win" type="submit" value="Windows客户端下载">
         </div>
-        <div class="download_mac-config">
-            <input class="submit" type="submit" value="Windows客户端下载">
+
+        <div class="right_div">
+            <p class="sock5">Socks5 is fast and secure, please rest assured, <br>
+                A secure socks5 proxy,
+                designed to protect your Internet traffic.
+            </p>
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="home-instro"><p>If you use socks you can get these</p></div>
+    <div class="container clearfix">
+        <div class="our-services">
+            <ul>
+
+                <li class="one-third column">
+                    <div class="icon-box">
+                        <i class="fa fa-bolt fa-2x"></i>
+                    </div>
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">超级快</font></font>
+                    </h3>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用异步I /
+                        O和事件驱动的编程的先进技术运行速度更快，成本更低。</font></font></p>
+                </li>
+
+                <li class="one-third column">
+                    <div class="icon-box">
+                        <i class="fa fa-shield fa-2x"></i>
+                    </div>
+                    <h3><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;">灵活的加密</font></font></h3>
+                    <p><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;">通过行业级别的加密算法进行保护。</font><font
+                            style="vertical-align: inherit;">灵活支持自定义算法。</font></font></p>
+                </li>
+
+                <li class="one-third column">
+                    <div class="icon-box">
+                        <i class="fa fa-desktop fa-2x"></i>
+                    </div>
+                    <h3><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;">连接速度优化</font></font></h3>
+                    <p><font style="vertical-align: inherit;"><font
+                            style="vertical-align: inherit;">无论身在何处，连接速度都更快。</font></font></p>
+                </li>
+
+                <li class="one-third column">
+                    <div class="icon-box"><i class="fa fa-globe fa-2x"></i></div>
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完全免费</font></font>
+                    </h3>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">完全免费，您可以将其与自己的自定义服务器一起使用，没有任何限制。</font></font>
+                    </p>
+                </li>
+
+                <li class="one-third column">
+                    <div class="icon-box">
+                        <i class="fa fa-cloud-download fa-2x"></i>
+                    </div>
+                    <h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">易于部署</font></font>
+                    </h3>
+                    <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过简单的拖放操作或从应用商店轻松部署。</font></font>
+                    </p>
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="left_nav_">左边菜单</div>
-
     <div class="footer_">页脚</div>
+
 </div>
 
 {% endblock %}
