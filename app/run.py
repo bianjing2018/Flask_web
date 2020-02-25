@@ -22,4 +22,4 @@ def load_user(user_id):
 
 if __name__ == '__main__':
     from Views import *
-    app.run(port=9988)
+    app.run(port=9988, debug=True)

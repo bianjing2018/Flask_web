@@ -3,6 +3,58 @@
 {% block title %}Home{% endblock %}
 {% block page_content %}
 
-<h1>THIS IS HOME PAGE</h1>
+<style>
+    * {padding:0; margin: 0}
+    .container_ {
+        width: 100%;
+        margin:0 auto;
+        background: #ffffff;
+        position: absolute;}
+    .header_ {
+        height: 90px;
+        width: 100%;
+        background: #ffffff}
+    .content_ {
+        width: 30%;
+        height: 300px;
+        background: #eee;
+        float: left;}
+    .left_nav_ {
+        width: 50%;
+        height: 300px;
+        background:#eee;
+        position: marker;
+        }
+    .footer_ {
+        height: 50px;
+        background: #0f1011;
+        clear:both}
+    .download-button {
+        margin-left: 50px;
+        margin-top: 100px}
+    .download_mac-config {
+        margin-left: 50px;
+        margin-bottom: 100px;
+        margin-top: 10px}
+    .submit {
+        width: 270px;
+        height: 45px;
+        border-radius: 10px;}
+</style>
+
+<div class="container_">
+    <div class="header_"><span><h1>ShadowsocksX</h1></span></div>
+    <div class="content_">
+        <div class="download-button">
+            <input class="submit" type="submit" value="MAC客户端下载">
+        </div>
+        <div class="download_mac-config">
+            <input class="submit" type="submit" value="Windows客户端下载">
+        </div>
+    </div>
+    <div class="left_nav_">左边菜单</div>
+
+    <div class="footer_">页脚</div>
+</div>
 
 {% endblock %}
